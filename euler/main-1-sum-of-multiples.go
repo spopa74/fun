@@ -3,7 +3,7 @@
 
 // WARMUP
 
-package main
+package euler
 
 import "fmt"
 

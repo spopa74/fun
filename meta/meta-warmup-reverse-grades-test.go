@@ -1,4 +1,4 @@
-package main
+package meta
 
 // WARMUP
 // assumes indeed N >=0 and len(C) == N

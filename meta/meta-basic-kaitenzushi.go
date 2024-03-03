@@ -1,4 +1,4 @@
-package main
+package meta
 
 // BASIC
 func isDishInLastEaten(lastAsMap map[int32]bool, dish int32) bool {

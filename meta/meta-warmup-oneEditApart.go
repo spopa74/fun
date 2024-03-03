@@ -1,4 +1,4 @@
-package main
+package meta
 
 // WARMUP
 func oneEditApart(s1 string, s2 string) bool {
