@@ -1,16 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"fun/leetcode"
+)
 
 func main() {
 
-	// reverse grades problem
+	// meta - reverse grades problem
 	// fmt.Println(getWrongAnswers(0, "ABA"))
 
-	// next line problem
+	// meta - next line problem
 	// fmt.Println(nextLine("111221"))
 
-	// one edit apart problem
+	// meta - one edit apart problem
 	// fmt.Println(countMinEdits("btsad", 0, "cat", 0))
 	// fmt.Println(oneEditApart("cat", "dog"))  // = false
 	// fmt.Println(oneEditApart("cat", "cats")) // = true
@@ -19,7 +22,7 @@ func main() {
 	// fmt.Println(oneEditApart("cat", "at"))   // = true
 	// fmt.Println(oneEditApart("cat", "act"))  // = false
 
-	// additional seats
+	// meta - additional seats
 	// fmt.Println(getMaxAdditionalDinersCount(10, 1, 2, []int64{2, 6}))
 	// fmt.Println(getMaxAdditionalDinersCount(15, 2, 3, []int64{11, 6, 14}))
 	// fmt.Println(getMaxAdditionalDinersCount(13, 5, 2, []int64{1, 13}))
@@ -30,8 +33,14 @@ func main() {
 	// fmt.Println(getMaxAdditionalDinersCount(13, 3, 2, []int64{1, 2, 4}))
 	// fmt.Println(getMaxAdditionalDinersCount(13, 3, 2, []int64{1, 2, 4}))
 
-	// kaitenzushi
-	fmt.Println(getMaximumEatenDishCount(6, []int32{1, 2, 3, 3, 2, 1}, 1)) // => 5
+	// meta - kaitenzushi
+	// fmt.Println(getMaximumEatenDishCount(6, []int32{1, 2, 3, 3, 2, 1}, 1)) // => 5
 	// fmt.Println(getMaximumEatenDishCount(6, []int32{1, 2, 3, 3, 2, 1}, 2)) // => 4
 	// fmt.Println(getMaximumEatenDishCount(7, []int32{1, 2, 1, 2, 1, 2, 1}, 2)) // => 2
+
+	// leetcode - findMedianSortedArrays
+	// fmt.Println(leetcode.Median([]int{1, 2, 3}))    // => 2
+	// fmt.Println(leetcode.Median([]int{1, 2, 3, 4})) // => 2.5
+	fmt.Println(leetcode.FindMedianSortedArrays([]int{1, 2, 3}, []int{1, 2, 3})) // => 2
+
 }
