@@ -1,14 +1,6 @@
 package meta
 
-import "fmt"
-
-func main_hit_probability() {
-
-	fmt.Println(getWrongAnswers(0, "ABA"))
-
-}
-
-func getHitProbability(R int32, C int32, G [][]int32) float64 {
+func GetHitProbability(R int32, C int32, G [][]int32) float64 {
 
 	possibleHits := 0
 

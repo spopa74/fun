@@ -1,13 +1,13 @@
 package meta
 
 // WARMUP
-func oneEditApart(s1 string, s2 string) bool {
+func OneEditApart(s1 string, s2 string) bool {
 
-	return countMinEdits(s1, 0, s2, 0) == 1
+	return CountMinEdits(s1, 0, s2, 0) == 1
 
 }
 
-func countMinEdits(s1 string, i1 int, s2 string, i2 int) int {
+func CountMinEdits(s1 string, i1 int, s2 string, i2 int) int {
 
 	if s1 == "" || i1 == len(s1) {
 		// fmt.Println("s1 empty")
@@ -22,16 +22,16 @@ func countMinEdits(s1 string, i1 int, s2 string, i2 int) int {
 	// change letter in place, count rest
 	clip := 0
 	if s1[i1] == s2[i2] {
-		clip = countMinEdits(s1, i1+1, s2, i2+1)
+		clip = CountMinEdits(s1, i1+1, s2, i2+1)
 	} else {
-		clip = 1 + countMinEdits(s1, i1+1, s2, i2+1)
+		clip = 1 + CountMinEdits(s1, i1+1, s2, i2+1)
 	}
 
 	// remove letter s1, count rest
-	rl1 := 1 + countMinEdits(s1, i1+1, s2, i2)
+	rl1 := 1 + CountMinEdits(s1, i1+1, s2, i2)
 
 	// remove letter s2, count rest
-	rl2 := 1 + countMinEdits(s1, i1, s2, i2+1)
+	rl2 := 1 + CountMinEdits(s1, i1, s2, i2+1)
 
 	return min(clip, rl1, rl2)
 

@@ -17,7 +17,7 @@ func addDishEaten(cutoff int32, lastAsSlice []int32, lastAsMap map[int32]bool, d
 	return lastAsSlice
 }
 
-func getMaximumEatenDishCount(N int32, D []int32, K int32) int32 {
+func GetMaximumEatenDishCount(N int32, D []int32, K int32) int32 {
 
 	lastEatenAsSlice := []int32{}
 	lastEatenAsMap := make(map[int32]bool)

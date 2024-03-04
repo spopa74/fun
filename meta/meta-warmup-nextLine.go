@@ -7,7 +7,7 @@ import (
 )
 
 // WARMUP
-func nextLine(s string) (string, error) {
+func NextLine(s string) (string, error) {
 
 	// if param empty, error
 	if s == "" {

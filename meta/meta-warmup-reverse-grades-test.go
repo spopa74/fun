@@ -2,7 +2,7 @@ package meta
 
 // WARMUP
 // assumes indeed N >=0 and len(C) == N
-func getWrongAnswers(N int32, C string) string {
+func GetWrongAnswers(N int32, C string) string {
 
 	var response string
 

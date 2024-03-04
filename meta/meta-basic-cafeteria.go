@@ -19,7 +19,7 @@ import (
 var test = 1
 
 // BASIC
-func getMaxAdditionalDinersCount(N int64, K int64, M int32, S []int64) int64 {
+func GetMaxAdditionalDinersCount(N int64, K int64, M int32, S []int64) int64 {
 
 	fmt.Printf("CASE %d: N = %d, K = %d, M = %d\n", test, N, K, M)
 	fmt.Println(S)
