@@ -39,8 +39,8 @@ func main() {
 	// fmt.Println(meta.GetMaximumEatenDishCount(7, []int32{1, 2, 1, 2, 1, 2, 1}, 2)) // => 2
 
 	// leetcode - findMedianSortedArrays
-	// fmt.Println(leetcode.Median([]int{1, 2, 3}))    // => 2
-	// fmt.Println(leetcode.Median([]int{1, 2, 3, 4})) // => 2.5
-	fmt.Println(leetcode.FindMedianSortedArrays([]int{1, 2, 3}, []int{1, 2, 3})) // => 2
+	fmt.Println(leetcode.Median([]int{1, 2, 3}, 0, 2))    // => 2
+	fmt.Println(leetcode.Median([]int{1, 2, 3, 4}, 0, 3)) // => 2.5
+	// fmt.Println(leetcode.FindMedianSortedArrays([]int{1, 2, 3}, []int{1, 2, 3})) // => 2
 
 }
