@@ -1,11 +1,10 @@
 package main
 
-import (
-	"fmt"
-	"fun/leetcode"
-)
+import smallstuff "fun/datastructures"
 
 func main() {
+
+	smallstuff.TestStack()
 
 	// meta - reverse grades problem
 	// fmt.Println(meta.GetWrongAnswers(0, "ABA"))
@@ -38,9 +37,15 @@ func main() {
 	// fmt.Println(meta.GetMaximumEatenDishCount(6, []int32{1, 2, 3, 3, 2, 1}, 2))    // => 4
 	// fmt.Println(meta.GetMaximumEatenDishCount(7, []int32{1, 2, 1, 2, 1, 2, 1}, 2)) // => 2
 
+	// meta - mail office
+	// meta.GetMaxExpectedProfit(5, []int32{10, 2, 8, 6, 4}, 5, 0.0)
+	// meta.GetMaxExpectedProfit(5, []int32{10, 2, 8, 6, 4}, 5, 1.0)
+	// meta.GetMaxExpectedProfit(5, []int32{10, 2, 8, 6, 4}, 3, 0.5)
+	// meta.GetMaxExpectedProfit(5, []int32{10, 2, 8, 6, 4}, 3, 0.15)
+
 	// leetcode - findMedianSortedArrays
-	fmt.Println(leetcode.Median([]int{1, 2, 3}, 0, 2))    // => 2
-	fmt.Println(leetcode.Median([]int{1, 2, 3, 4}, 0, 3)) // => 2.5
+	// fmt.Println(leetcode.Median([]int{1, 2, 3}, 0, 2))    // => 2
+	// fmt.Println(leetcode.Median([]int{1, 2, 3, 4}, 0, 3)) // => 2.5
 	// fmt.Println(leetcode.FindMedianSortedArrays([]int{1, 2, 3}, []int{1, 2, 3})) // => 2
 
 }

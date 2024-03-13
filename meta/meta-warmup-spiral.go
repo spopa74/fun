@@ -6,7 +6,7 @@ import (
 )
 
 // WARMUP
-func main_spiral() {
+func Spiral() {
 	fmt.Println("Starting...")
 
 	n := 4
