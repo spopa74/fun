@@ -1,10 +1,9 @@
 package main
 
-import smallstuff "fun/datastructures"
-
 func main() {
 
-	smallstuff.TestStack()
+	// datastructures.TestStack()
+	// datastructures.TestQueue()
 
 	// meta - reverse grades problem
 	// fmt.Println(meta.GetWrongAnswers(0, "ABA"))

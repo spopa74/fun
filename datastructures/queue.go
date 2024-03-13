@@ -11,7 +11,7 @@ var queue []int
 func dequeue() int {
 	if len(queue) > 0 {
 		elem := queue[0]
-		queue = queue[1 : len(queue)-1]
+		queue = queue[1:]
 		return elem
 	}
 

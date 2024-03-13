@@ -11,7 +11,7 @@ var stack []int
 func pop() int {
 	if len(stack) > 0 {
 		elem := stack[len(stack)-1]
-		stack = stack[0 : len(stack)-2]
+		stack = stack[0 : len(stack)-1]
 		return elem
 	}
 
