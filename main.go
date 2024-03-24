@@ -1,9 +1,12 @@
 package main
 
+import "fun/datastructures"
+
 func main() {
 
 	// datastructures.TestStack()
 	// datastructures.TestQueue()
+	datastructures.TestPerm()
 
 	// meta - reverse grades problem
 	// fmt.Println(meta.GetWrongAnswers(0, "ABA"))
