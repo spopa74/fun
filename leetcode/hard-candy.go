@@ -58,7 +58,7 @@ func Candy(ratings []int) int {
 					}
 					// if same rating, give same candies
 					if ratings[0] == ratings[1] {
-						candies[0] = candies[1]
+						candies[0] = 1 // apparently is ok to give less for same rating
 						continue
 					}
 					// if not (rating is greater), give candies neighbor + 1
@@ -72,7 +72,7 @@ func Candy(ratings []int) int {
 					}
 					// if same rating, give same candies
 					if ratings[lastIndex] == ratings[lastIndex-1] {
-						candies[lastIndex] = candies[lastIndex-1]
+						candies[lastIndex] = 1 // apparently is ok to give less for same rating
 						continue
 					}
 					// if not (rating is greater), give candies neighbor + 1
@@ -89,7 +89,7 @@ func Candy(ratings []int) int {
 					// 0 ? r
 					if candies[crtPosition-1] == 0 && candies[crtPosition+1] != 0 {
 						if ratings[crtPosition] == ratings[crtPosition+1] {
-							candies[crtPosition] = candies[crtPosition+1]
+							candies[crtPosition] = 1 // apparently is ok to give less for same rating
 							continue
 						}
 						// rating is greater
@@ -99,7 +99,7 @@ func Candy(ratings []int) int {
 					// l ? 0
 					if candies[crtPosition-1] != 0 && candies[crtPosition+1] == 0 {
 						if ratings[crtPosition] == ratings[crtPosition-1] {
-							candies[crtPosition] = candies[crtPosition-1]
+							candies[crtPosition] = 1 // apparently is ok to give less for same rating
 							continue
 						}
 						// rating is greater
