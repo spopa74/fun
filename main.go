@@ -1,12 +1,16 @@
 package main
 
-import "fun/datastructures"
+import (
+	"fmt"
+	"fun/leetcode"
+)
 
 func main() {
 
 	// datastructures.TestStack()
 	// datastructures.TestQueue()
-	datastructures.TestPerm()
+	// datastructures.TestPerm()
+	// datastructures.TestBitwise()
 
 	// meta - reverse grades problem
 	// fmt.Println(meta.GetWrongAnswers(0, "ABA"))
@@ -49,5 +53,8 @@ func main() {
 	// fmt.Println(leetcode.Median([]int{1, 2, 3}, 0, 2))    // => 2
 	// fmt.Println(leetcode.Median([]int{1, 2, 3, 4}, 0, 3)) // => 2.5
 	// fmt.Println(leetcode.FindMedianSortedArrays([]int{1, 2, 3}, []int{1, 2, 3})) // => 2
+
+	// fmt.Println(leetcode.Candy([]int{1, 0, 2}))
+	fmt.Println(leetcode.Candy([]int{1, 2, 2}))
 
 }
