@@ -4,6 +4,11 @@ import "fmt"
 
 func Candy(ratings []int) int {
 
+	// stupid edge case - 1 kid
+	if len(ratings) == 1 {
+		return 1
+	}
+
 	// to help
 	var lastIndex int = len(ratings) - 1
 	fmt.Println("lastIndex: ", lastIndex)
@@ -106,23 +111,54 @@ func Candy(ratings []int) int {
 						candies[crtPosition] = candies[crtPosition-1] + 1
 						continue
 					}
-					// l ? r
-					// compare left with right
-					if ratings[crtPosition-1] > ratings[crtPosition+1] {
-						// left dominant
-						if ratings[crtPosition-1] == ratings[crtPosition] {
-							candies[crtPosition] = candies[crtPosition-1]
-							continue
-						} else {
-							candies[crtPosition] = candies[crtPosition-1] + 1
+					// none of neighbors is 0
+					// l = ? = r
+					if ratings[crtPosition-1] == ratings[crtPosition] && ratings[crtPosition] == ratings[crtPosition+1] {
+						candies[crtPosition] = 1 // apparently allowed
+						continue
+					}
+					// l = ? < r
+					if ratings[crtPosition-1] == ratings[crtPosition] && ratings[crtPosition] < ratings[crtPosition+1] {
+						candies[crtPosition] = 1 // apparently allowed
+						continue
+					}
+					// l = ? > r
+					if ratings[crtPosition-1] == ratings[crtPosition] && ratings[crtPosition] > ratings[crtPosition+1] {
+						candies[crtPosition] = candies[crtPosition+1] + 1
+						continue
+					}
+
+					// l < ? = r
+					if ratings[crtPosition-1] < ratings[crtPosition] && ratings[crtPosition] == ratings[crtPosition+1] {
+						candies[crtPosition] = candies[crtPosition-1] + 1
+						continue
+					}
+					// l < ? < r
+					if ratings[crtPosition-1] < ratings[crtPosition] && ratings[crtPosition] < ratings[crtPosition+1] {
+						candies[crtPosition] = candies[crtPosition-1] + 1
+						continue
+					}
+					// l < ? > r
+					if ratings[crtPosition-1] < ratings[crtPosition] && ratings[crtPosition] > ratings[crtPosition+1] {
+						if candies[crtPosition-1] < candies[crtPosition+1] {
+							candies[crtPosition] = candies[crtPosition+1] + 1
 							continue
 						}
-					}
-					// right dominant
-					if ratings[crtPosition+1] == ratings[crtPosition] {
-						candies[crtPosition] = candies[crtPosition+1]
+						candies[crtPosition] = candies[crtPosition-1] + 1
 						continue
-					} else {
+					}
+					// l > ? = r
+					if ratings[crtPosition-1] > ratings[crtPosition] && ratings[crtPosition] == ratings[crtPosition+1] {
+						candies[crtPosition] = 1
+						continue
+					}
+					// l > ? < r
+					if ratings[crtPosition-1] > ratings[crtPosition] && ratings[crtPosition] < ratings[crtPosition+1] {
+						candies[crtPosition] = 1
+						continue
+					}
+					// l > ? > r
+					if ratings[crtPosition-1] > ratings[crtPosition] && ratings[crtPosition] > ratings[crtPosition+1] {
 						candies[crtPosition] = candies[crtPosition+1] + 1
 						continue
 					}
