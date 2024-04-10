@@ -1,8 +1,7 @@
 package main
 
 import (
-	"fmt"
-	"fun/leetcode"
+	"fun/various"
 )
 
 func main() {
@@ -56,6 +55,8 @@ func main() {
 
 	// fmt.Println(leetcode.Candy([]int{1, 0, 2}))
 	// fmt.Println(leetcode.Candy([]int{0, 1, 2, 5, 3, 2, 7}))
-	fmt.Println(leetcode.Candy([]int{0}))
+	// fmt.Println(leetcode.Candy([]int{0}))
+
+	various.MaxRangeSum([]int{4, -5, 4, -3, 0, 4, -5})
 
 }
