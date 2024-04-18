@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"fun/various"
 )
 
@@ -10,6 +11,7 @@ func main() {
 	// datastructures.TestQueue()
 	// datastructures.TestPerm()
 	// datastructures.TestBitwise()
+	// datastructures.TestStrings()
 
 	// meta - reverse grades problem
 	// fmt.Println(meta.GetWrongAnswers(0, "ABA"))
@@ -57,6 +59,7 @@ func main() {
 	// fmt.Println(leetcode.Candy([]int{0, 1, 2, 5, 3, 2, 7}))
 	// fmt.Println(leetcode.Candy([]int{0}))
 
-	various.MaxRangeSum([]int{4, -5, 4, -3, 0, 4, -5})
+	// various.MaxRangeSum([]int{4, -5, 4, -3, 0, 4, -5})
+	fmt.Println(various.LongestIncreasing([]int{4, -5, 4, -3, -5, 4, -5}))
 
 }
