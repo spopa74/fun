@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"fun/various"
+	"fun/leetcode"
 )
 
 func main() {
@@ -12,6 +12,7 @@ func main() {
 	// datastructures.TestPerm()
 	// datastructures.TestBitwise()
 	// datastructures.TestStrings()
+	// datastructures.TestIntHeap()
 
 	// meta - reverse grades problem
 	// fmt.Println(meta.GetWrongAnswers(0, "ABA"))
@@ -54,12 +55,13 @@ func main() {
 	// fmt.Println(leetcode.Median([]int{1, 2, 3}, 0, 2))    // => 2
 	// fmt.Println(leetcode.Median([]int{1, 2, 3, 4}, 0, 3)) // => 2.5
 	// fmt.Println(leetcode.FindMedianSortedArrays([]int{1, 2, 3}, []int{1, 2, 3})) // => 2
-
 	// fmt.Println(leetcode.Candy([]int{1, 0, 2}))
 	// fmt.Println(leetcode.Candy([]int{0, 1, 2, 5, 3, 2, 7}))
 	// fmt.Println(leetcode.Candy([]int{0}))
-
+	// fmt.Println(leetcode.ProductExceptSelf([]int{1, 2, 3, 4}))
+	// fmt.Println(leetcode.ProductExceptSelf([]int{-1, 1, 0, -3, 3}))
+	fmt.Println(leetcode.ValidPalindrome("anppppzxa"))
 	// various.MaxRangeSum([]int{4, -5, 4, -3, 0, 4, -5})
-	fmt.Println(various.LongestIncreasing([]int{4, -5, 4, -3, -5, 4, -5}))
+	// fmt.Println(various.LongestIncreasing([]int{4, -5, 4, -3, -5, 4, -5}))
 
 }
